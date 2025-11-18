@@ -30,7 +30,23 @@ A fun, interactive Flask application that runs inside a Docker container. It com
 
 3.  Open your browser and visit:
     `http://localhost:5577`
+    
+### Installation (The Quick Way: Docker Pull)
 
+If you have Docker installed, you can skip the building step and pull the ready image directly from Docker Hub:
+
+1.  Pull the image:
+    ```bash
+    docker pull vandire/firing-wheel:latest
+    ```
+
+2.  Run the container:
+    ```bash
+    docker run -d -p 5577:5577 vandire/firing-wheel:latest
+    ```
+
+3.  Open your browser and visit:
+    `http://localhost:5577`
 ### Manual Installation (Without Docker)
 
 1.  Install dependencies:
