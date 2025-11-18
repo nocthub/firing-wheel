@@ -1,0 +1,26 @@
+# version: '3.8'
+
+services:
+  vandire-app:
+    # 1. ابحث عن Dockerfile في هذا المجلد وقم ببنائه
+    build: .
+
+    # 2. اسم الصورة التي سيتم إنشاؤها
+    image: vandire7/ahmeds-app:latest
+    container_name: ahmed-container
+
+    # 3. ربط المنفذ (يحل محل -p 5000:5000)
+    ports:
+      - "5577:5577"
+
+    volumes:
+      - ./static:/app/static
+
+    # 4. إعادة التشغيل تلقائياً لضمان عمله دائماً
+    restart: unless-stopped
+
+    # 5. متغيرات البيئة التي سيقرأها app.py
+    environment:
+      - YT_CHANNEL_URL=https://www.youtube.com/@vandire7
+      - YT_SUBSCRIBE_URL=https://www.youtube.com/@vandire7?sub_confirmation=1
+      - YT_SHARE_URL=https://www.youtube.com/@vandire7
