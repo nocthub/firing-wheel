@@ -1,12 +1,12 @@
-# Docker Manager's Wheel & System Monitor
+# 🐋 Firing Wheel: System Monitor & Manager Game
 
-A fun, interactive Flask application that runs inside a Docker container. It combines real-time system resource monitoring (CPU, RAM, Disk) with a humorous "Manager's Wheel" game to "fire" employees, all wrapped in a Docker-themed UI.
+A fun, interactive Flask application that runs inside a Docker container. It combines real-time system resource monitoring (CPU, RAM, Disk) with a satirical "Manager's Wheel" game to "fire" employees, all wrapped in a Docker-themed UI.
 
 ## ✨ Features
 
-* [cite_start]**Live System Monitoring:** Uses WebSockets (`flask-socketio`) to display real-time CPU, Memory, and Disk usage from inside the container[cite: 1].
+* **Live System Monitoring:** Uses WebSockets (`flask-socketio`) to display real-time CPU, Memory, and Disk usage from inside the container.
 * **The Manager's Wheel:** An interactive HTML5 canvas game where you input names and spin the wheel to randomly "fire" someone (with sound effects!).
-* [cite_start]**Docker Integration:** Fully containerized with `Dockerfile` and `docker-compose` for easy deployment[cite: 2, 3].
+* **Docker Integration:** Fully containerized with `Dockerfile` and `docker-compose` for easy deployment.
 * **Stress Test:** Includes a feature to artificially stress the CPU cores to test the monitoring gauges.
 * **Whale Animation:** Features an animated ASCII art whale and a "danger" mode UI.
 
@@ -19,8 +19,8 @@ A fun, interactive Flask application that runs inside a Docker container. It com
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-    cd YOUR_REPO_NAME
+    git clone [https://github.com/nocthub/firing-wheel.git](https://github.com/nocthub/firing-wheel.git)
+    cd firing-wheel
     ```
 
 2.  Run with Docker Compose:
@@ -47,17 +47,13 @@ A fun, interactive Flask application that runs inside a Docker container. It com
 * `app.py`: The main Flask application containing the logic for WebSockets, the stress test, and the HTML rendering.
 * `Dockerfile`: Instructions to build the Python 3.11 lightweight image.
 * `docker-compose.yml`: Configuration to run the container and map port 5577.
-* `static/`: (Ensure you have this folder) Contains the sound effects (`spinning.mp3`, `win.mp3`, etc.).
+* `static/`: Contains the sound effects (`spinning.mp3`, `win.mp3`, etc.).
 
 ## 🛠 Technologies Used
 
-* [cite_start]**Backend:** Python, Flask, Flask-SocketIO, Psutil[cite: 1].
+* **Backend:** Python, Flask, Flask-SocketIO, Psutil.
 * **Frontend:** HTML5, CSS3 (Animations), JavaScript, Socket.io-client.
 * **Containerization:** Docker.
-
-## 📸 Screenshots
-
-*(You can upload screenshots to your repo later and link them here)*
 
 ## 📝 License
 
